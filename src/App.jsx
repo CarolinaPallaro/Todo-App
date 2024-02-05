@@ -1,21 +1,28 @@
-import { useState } from 'react'
-
-
+import React from "react";
+import { Title } from "./componentes/Title";
+import { Todoinput } from "./componentes/Todoinput"; 
+import { TodoList } from "./componentes/TodoList";
+import { Todo } from "./componentes/Todo/Todo";
 function App() {
   
 
   return (
-    <div>   
-      <div className='container'>
+    <>
+    <div className="bg-body min-h-screen h-full font-Sixtyfour text-gray-100 flex items-center justify-center py-20 px-5">   
 
-        <h1 className=''>Todo App</h1>
-       
+   <div className="container flex flex-col max-w-xl" >
+      <Title />
+      <Todoinput />
+        <TodoList>
+          <Todo/>
+        </TodoList>
 
-      </div>
-    
     </div>
- 
+     
 
+    </div>
+  
+</>
   );
 }
 

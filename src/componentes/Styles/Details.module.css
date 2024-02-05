@@ -1,0 +1,14 @@
+
+****#DETALLES DE LA PAGINA****
+
+#MANCHAS
+
+.ovalMancha {
+    /* width: 200px;
+    height: 100px; */
+    background-color:rgba(240, 37, 254, 0.881);
+    border-radius: 50%;
+    position: relative; 
+    z-index: 1;
+}
+
