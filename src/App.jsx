@@ -6,33 +6,24 @@ import { useEffect, useState } from 'react';
 import { Title, TodoInput, TodoList } from './componentes';
 
 function App() {
+
+  //Arreglo con prediseñados 
+
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: 'Watch the next Marvel Movie',
+      title: 'Practica con React',
       completed: false,
     },
-    {
-      id: 2,
-      title: 'Record the next Video',
-     completed: false,
-    },
-    {
-      id: 3,
-      title: 'Wash the dishes',
-      completed: false,
-    },
-    {
-      id: 4,
-      title: 'Study 2 hours',
-      completed: false,
-    }
+   
   ])
 
+  //Estados para los filtros de items
   const [activeFilter, setActiveFilter] = useState('all');
 
   const [filteredTodos, setFilteredTodos] = useState(todos);
 
+  //Agrega un nuevo ítem a la lista 
   const addTodo = (title) => {
     const lastId = todos.length > 0 ? todos[todos.length - 1].id : 1;
 
@@ -48,6 +39,7 @@ function App() {
     setTodos(todoList);
   }
 
+    /* #OPCIONES DE FILTRADO# */ 
   const handleSetComplete = (id) => {
 
     const updatedList = todos.map(todo => {
@@ -69,6 +61,7 @@ function App() {
     const updatedList = todos.filter(todo => todo.id !== id);
     setTodos(updatedList);
   }
+
 
   const showAllTodos = () => {
     setActiveFilter('all')

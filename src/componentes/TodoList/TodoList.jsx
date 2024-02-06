@@ -1,9 +1,7 @@
-import {Todo} from '../Todo/Todo'
-import { TodoFilters } from "../TodoFilters/TodoFilters";
+import { Todo } from "../Todo"
+import { TodoFilters } from "../TodoFilters"
 
-
-
-const TodoList = ({ 
+const TodoList = ({
     todos,
     activeFilter,
     handleSetComplete,
@@ -20,7 +18,7 @@ const TodoList = ({
             )}
             <TodoFilters
                 activeFilter={activeFilter}
-                total={todos.length}
+               total={todos.length}
                 showAllTodos={showAllTodos}
                 showActiveTodos={showActiveTodos}
                 showCompletedTodos={showCompletedTodos}
@@ -29,4 +27,4 @@ const TodoList = ({
     )
 }
 
-export {TodoList}
+export { TodoList }
