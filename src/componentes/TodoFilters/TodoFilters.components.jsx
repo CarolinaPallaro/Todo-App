@@ -6,7 +6,7 @@ const FiltersContainter = ({ children }) => {
     )
 }
 
-const ItemsLeft = ({total = 0 }) => {
+const ItemsLeft = ({total}) => {
     return(
         <p className="text-gray-400 text-sm">
             {total} items left
@@ -25,11 +25,11 @@ const FilterButtonContainer = ({children}) => {
 const FilterButton = ({action, active, filter}) => {
     return(
         <button className={`hoover:text-white cursor-pointer transition-all duration-300 easi-in-out`
-        + (active.toLowerCase().includes(filter.toLowerCase()) ? 'text-blue-400' : 'text-gray-400')
-        
-        }>
+        + (active.toLowerCase().includes(filter.toLowerCase()) ? 'text-blue-400' : 'text-gray-400')}>
             {filter}
-        </button>
+            </button>
+        
+    
     )
 }
 

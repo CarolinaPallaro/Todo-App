@@ -1,2 +1,1 @@
-
-export * from './Todoinput';
+export * from './TodoInput'
